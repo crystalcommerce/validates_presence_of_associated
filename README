@@ -1,0 +1,16 @@
+ValidatesPresenceOfAssociated
+=============================
+
+Simple plugin that provides validates_presence_of_associated, which validates presence of association id unless a new association object is present
+
+Solves a circular dependency of requiring the foreign key to be valid, but needing to be valid before saving the foreign object to generate the key
+
+Example
+=======
+
+class Foo
+  belongs_to :bar
+  validates_presence_of_associated :bar
+end
+
+Copyright (c) 2010 Woody Peterson, released under the MIT license
