@@ -1,1 +1,1 @@
-# Include hook code here
+require 'validates_presence_of_associated'
